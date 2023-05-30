@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useBinder } from "@beyond-js/react-18-widgets/hooks";
 
 export /*bundle*/
-function Page(): JSX.Element {
+function Page({ store }): JSX.Element {
   const [text, setText] = useState("");
-  const [messages, setMesssages] = useState([]);
+  const [messages, setMessages] = useState(store.messages);
   const messagesEnd = useRef(null);
   const scrollToBottom = () => {
     messagesEnd.current?.scrollIntoView({ behavior: "smooth" });
@@ -11,12 +12,15 @@ function Page(): JSX.Element {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [store.messages]);
+
+  useBinder([store], () => {
+    setMessages(store.messages);
+  });
 
   const handleSend = () => {
     if (text.length) {
       setText("");
-      setMesssages([...messages, text]);
     }
   };
   const handleKeyDown = (e) => {
