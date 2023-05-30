@@ -1,6 +1,5 @@
 import { ReactiveModel } from "@beyond-js/reactive-2/model";
 import { AIModel } from "@aimpact/backend/aihub";
-import { ChainModel } from "@aimpact/langchain/models";
 
 interface IStore {}
 interface IMessages {

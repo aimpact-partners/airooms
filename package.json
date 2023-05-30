@@ -19,8 +19,7 @@
   "libraries": {
     "imports": [
       "@beyond-js/reactive-2",
-      "@aimpact/backend",
-      "@aimpact/langchain"
+      "@aimpact/backend"
     ]
   },
   "deployment": {
