@@ -1,0 +1,6 @@
+.beyond
+.vscode
+.idea
+.env
+node_modules
+package-lock.json

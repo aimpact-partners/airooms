@@ -1,0 +1,11 @@
+{
+  "name": "model-register",
+  "platforms": ["web", "android", "ios"],
+  "description": "Register database",
+  "start": {
+    "ts": {
+      "path": "/start/ts",
+      "files": ["*"]
+    }
+  }
+}
