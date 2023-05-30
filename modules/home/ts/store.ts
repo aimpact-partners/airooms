@@ -1,6 +1,5 @@
 import { ReactiveModel } from "@beyond-js/reactive-2/model";
 import { AIModel } from "@aimpact/backend/aihub";
-import { ChainModel } from "@aimpact/langchain/models";
 
 interface IStore {}
 interface IMessages {
@@ -17,7 +16,7 @@ export class StoreManager extends ReactiveModel<IStore> {
 
   async query(question: string) {
     this.fetching = true;
-    this.#messages.push({ role: "system", content: question });
+    this.#messages.push({ role: "user", content: question });
     this.triggerEvent();
 
     const response = await this.#model.chat(this.#messages);
@@ -27,7 +26,7 @@ export class StoreManager extends ReactiveModel<IStore> {
     }
 
     this.fetching = false;
-    this.#messages.push({ role: "user", content: response.data });
+    this.#messages.push({ role: "system", content: response.data });
     this.triggerEvent();
   }
 }
