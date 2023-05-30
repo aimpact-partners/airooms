@@ -1,4 +1,4 @@
-import { Collection } from "@beyond-js/reactive/entities";
+import { Collection } from "@beyond-js/reactive-2/entities";
 import { Category } from "./item";
 
 export /*bundle */ class Categories extends Collection {
