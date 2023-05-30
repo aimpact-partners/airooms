@@ -1,22 +1,18 @@
 {
-  "name": "home",
+  "name": "home-rooms",
   "widget": {
     "is": "page",
     "route": "/",
     "element": {
-      "name": "home-page"
+      "name": "home-rooms-page"
     },
     "sass": {
       "path": "sass",
-      "files": [
-        "*"
-      ]
+      "files": ["*"]
     },
     "ts": {
       "path": "ts",
-      "files": [
-        "*"
-      ]
+      "files": ["*"]
     }
   }
 }

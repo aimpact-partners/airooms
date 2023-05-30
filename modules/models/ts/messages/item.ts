@@ -1,4 +1,4 @@
-import { Item } from "@beyond-js/reactive/entities";
+import { Item } from "@beyond-js/reactive-2/entities";
 
 interface IMessage {
   id: number;
