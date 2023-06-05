@@ -26,12 +26,14 @@
   background: var(--gray-darker);
   outline: none;
   font-weight: bolder;
+  font-size: var(--font-size-lg);
   color: var(--message);
   padding: 0 2.5vw;
+
   cursor: text;
 }
 
-#message {
+.message {
   color: var(--message);
   border-radius: var(--border-radius-base);
   box-shadow: 1px 1px 3px var(--gray-base), -1px -2px 3px var(--gray-dark);
@@ -40,10 +42,20 @@
   padding: 0.5vh 1vw;
   width: fit-content;
   max-width: 75%;
+  line-height: 2rem;
 }
 
-#message:nth-last-child(2) {
+.system {
+  margin-left: auto;
+}
+
+.message:nth-last-child(2) {
   animation: dash 0.2s;
+}
+
+#button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 @keyframes dash {
@@ -55,11 +67,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-#button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
 }
 
 /* SCROLLBAR */

@@ -2,7 +2,7 @@ import { ReactiveModel } from "@beyond-js/reactive-2/model";
 import { AIModel } from "@aimpact/backend/aihub";
 
 interface IStore {}
-interface IMessages {
+export interface IMessages {
   role: 'user'|'system';
   content: string;
 }

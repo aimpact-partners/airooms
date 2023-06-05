@@ -1,0 +1,68 @@
+.drawer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+
+  .drawer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--message);
+    border-radius: var(--border-radius-large);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    svg {
+      color: var(--gray-darker);
+    }
+
+    &:hover {
+      background-color: var(--gray-light);
+    }
+  }
+
+  .drawer-options {
+    visibility: hidden;
+    transform: scaleY(0) translateX(calc(-100% + 40px));
+    transition: transform 0.4s ease;
+    transform-origin: top;
+    position: absolute;
+    margin-top: 15px;
+    &.open {
+      visibility: visible;
+      transform: scaleY(1) translateX(calc(-100% + 40px));
+      background-color: var(--gray);
+      color: var(--gray-light);
+      border-radius: var(--border-radius-base);
+      padding: 8px;
+    }
+
+    .drawer-option {
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+      padding: 8px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border-radius: var(--border-radius-base);
+
+      &:hover {
+        background-color: var(--gray-light);
+        color: var(--gray-base);
+      }
+
+      svg {
+        margin-right: 8px;
+      }
+
+      .drawer-option-label {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}
